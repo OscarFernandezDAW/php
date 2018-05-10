@@ -1,0 +1,602 @@
+body {
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+header, section, footer{
+	width:80%;	
+	display:block;
+	margin:auto;
+	margin-top:10px;
+}
+
+header, footer{
+	display:flex;
+	border-radius:12px;
+	border:solid 1px #cccccc;
+}
+
+header, footer{
+	background-color:#0079b6;
+}
+
+section{
+	display:flex;
+	background-color:#FFFFFF;	
+}
+
+header{
+	height: 8em;
+	margin-top:2em;
+}
+#titulo{
+	display:block;
+	flex-basis:100%;
+}
+
+#titulo img{
+	display:block;
+	float:left;
+	width:199px;
+	height:50px;
+	margin-left:1em;
+	margin-right:0.5em;
+	margin-top:2em;
+	margin-bottom:4em;
+}
+
+#titulo h1,h2{
+	font-weight:bold;
+	color:#ffffff;
+	text-align:center;
+}
+
+#titulo h1{
+	margin-top: 1em;
+	font-size: 1.8em;
+	text-shadow: 3px 4px 2px rgba(0, 0, 0, 1);
+}
+
+#titulo h2{
+	font-size: 1.3em;
+	text-shadow: 1px 1px #000;
+}
+#localizacion{	
+	display:block;
+	width:75%;
+	float:right;
+	height:3em;
+}
+
+main{
+	background-color:#FFFFFF;
+	width:80%;	
+	height:25em;
+	display:block;
+	margin:auto;
+	clear:both;
+}
+#menu{
+	display:block;
+	float:left;
+	width:23%;
+	height:41em;
+	padding-top:0.5em;
+}
+
+#login{
+	display:block;
+	float:left;
+	width:100%;
+	height:15em;
+	padding-top:0.5em;
+	border-radius:12px;
+	border:solid 1px #cccccc;
+	margin-top:0.4em;
+}
+
+#registrate{
+	display:block;
+	width:100%;
+	height:2em;
+	margin-top:1em;
+}
+
+#registrate a{
+	display:block;
+	width:95%;
+	height:2em;
+	background-color: #FF3500;
+	color:#ffffff;
+	text-decoration:none;
+	border-radius:12px;
+	text-align:center;
+	font-weight:bold;
+	padding-top:1em;
+	margin:auto;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+}
+
+#autenticarse{
+	display:block;
+	width:90%;
+	height:9em;
+	border:1px solid #006699;
+	background-color:#0079b6;
+	margin:0 auto;
+	margin-top:0.6em;
+}
+#autenticarse legend{
+	display:block;
+	width:100%;
+	margin:0 auto;
+	text-align:center;
+	background-color:#ffffff;
+	font-size:1.3em;
+	color:#0079b6;
+	border:1px solid #006699;
+	margin-top:-1em;
+	margin-bottom:0.6em;
+}
+#autenticarse label{
+	display:block;
+	float:left;
+	width:6em;
+	font-weight:bold;
+	color:#ffffff;
+	margin-left:10px;
+	margin-top:8px;
+	text-shadow: 1px 1px #000;
+}
+
+#autenticarse input{
+	display:block;
+	float:left;
+	width:14em;
+	clear:right;
+	margin-top:8px;
+}
+#autenticarse span{
+	display:block;
+	float:left;
+	clear:both;
+	margin-top:0.4em;
+	font-weight:bold;
+	padding-left:1em;
+	color:#FFFF00;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+}
+
+
+input#recordar{
+	display:block;
+	float:left;
+	width:2em;
+	margin-top:1em;
+	margin-left:2em;
+	clear:left;
+}
+
+label#recordarL{
+	display:block;
+	float:left;
+	width:6em;
+	margin-top:0.8em;
+	height:1.5em;
+}
+
+input#loguearse{
+	display:block;
+	float:right;
+	margin-top:0.7em;
+	width:6em;
+	height:1.8em;	
+	background-color:#ffffff;
+	font-size:1em;
+	padding:2px;
+	text-align:center;
+	color:#0079b6;
+	border:1px solid #006699;
+}
+
+#historico{
+	display:block;
+	float:left;
+	width:100%;
+	height:22em;
+	margin-top:1.5em;
+	border-radius:12px;
+	border:1px solid #cccccc;
+}
+
+#historicoTemp{
+	width:95%;
+	margin:0 auto;	
+	border-collapse:collapse;
+	border:1px solid #006699;
+	text-align:center;
+	margin-top:0.5em;
+}
+
+#historicoTemp caption{
+	width:95%;
+	margin:0 auto;
+	text-align:center;
+	background-color:#ffffff;
+	font-size:1.3em;
+	color:#0079b6;
+	border:1px solid #0079b6;
+	margin-bottom:-10px;
+	position:relative;
+}
+
+#historicoTemp th{
+	color:#ffffff;
+	background-color:#0079b6;
+	padding-top:15px;
+	padding-bottom:5px;
+	text-shadow: 1px 1px #000;
+	border-bottom:1px solid #000000;
+	text-align:center;
+}
+
+#historicoTemp tr{
+	height:1.8em;
+	border-bottom:1px solid #cccccc;
+}
+
+#historicoTemp tr:nth-child(even){
+	background-color:#ffffff;
+	border-collapse:collapse;
+	color:#000000;	
+}
+
+#historicoTemp tr:nth-child(odd){
+	background-color:#73b6e6;
+	border-collapse:collapse;
+	color:#ffffff;
+}
+#historicoTemp tr td:nth-child(1){
+	font-weight:bold;
+}
+#historicoTemp tr td:nth-child(3){
+	
+	color:red;
+	text-shadow: 1px 1px #000;
+}
+
+#historicoTemp tr:last-child{
+	border-bottom:1px solid #006699;
+}
+.est{
+	text-align:center;
+}
+.est a{
+	text-decoration:none;
+}
+.par{
+	color:#ffffff;
+}
+.impar{
+	color:#000000;
+}
+
+nav a{
+	color:blue;
+}
+#contenido{
+	display:flex;
+	flex-flow: row wrap;
+	border-radius:12px;
+	border:solid 1px #cccccc;
+	float:right;
+	width:75%;
+	height:37em;
+	margin-bottom:1em;
+}
+
+#estaciones{
+	flex-basis:100%;
+	height:6em;
+	height:13%;
+
+}
+
+#estacionesMeteo{
+	margin:0 auto;
+	width:50%;
+	text-align:center;
+}
+
+#estacionesMeteo input{
+	margin-left:1em;
+}
+
+div#mapa{
+	width:50%;
+	height:85%;
+	border-radius:12px;
+	margin:5px;
+
+}
+div#resultados{
+	width:45%;
+	height:87%;
+}
+
+footer{
+	flex-flow:column wrap;
+}
+
+#creador{
+	display:block;
+	margin:0;
+	width:100%;
+	clear:right;
+	font-size:1.2em;
+	text-decoration:none;
+	font-weight:bold;
+	color:#FFFFFF;
+	text-align:center;
+	margin-bottom:5px;
+}
+
+#copy{
+	font-weight:bold;
+	font-size:0.8em;
+}
+
+footer span{
+	font-weight:normal;
+}
+
+footer a{
+	display:block;
+	margin:0 auto;
+	width:100%;
+	font-size:0.8em;
+	text-decoration:none;
+	font-weight:bold;
+	color:#FFFFFF;
+	text-align:center;
+	margin-bottom:10px;
+
+}
+
+footer a img{
+	vertical-align: middle;
+	margin-right:5px;
+}
+
+#informacion{
+	display:block;
+	width:80%;
+	padding:1em;
+	margin-left:3em;
+	border-radius:12px;
+	border:1px solid #ff3500;
+	margin-top:3em;
+}
+
+div#datosEstacion{
+	display:block;
+	width:90%;
+	margin:auto;
+	margin-left:3em;
+	
+}
+#datosEstacion h2{
+	color:#0079b6;
+	text-transform:Upperccase;
+	text-shadow: 1px 1px #000;
+	font-size:2em;
+	font-weight:bold;
+}
+#diariosTemp{
+	width:80%;
+	margin:auto;
+	border-collapse:collapse
+}
+#diariosTemp caption{
+	font-size:1.5em;
+}
+
+#diariosTemp th{
+	text-align:left;
+	padding-left:1em;
+	width:85%;
+	color:#FFFFFF;
+	background-color:#73b6e6;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+	border:1px solid #FFFFFF;
+}
+
+#diariosTemp td{
+	text-align:center;
+	border:1px solid #73b6e6;
+	border-left:2px solid #73b6e6;
+}
+
+#diariosCielo{
+	width:85%;
+	margin:auto;
+	border-collapse:collapse;
+	border:1px solid #73b6e6;
+	margin-top:1em;	
+}
+#diariosCielo caption{
+	font-size:1.5em;
+}
+#diariosCielo th{
+	text-align:center;
+	color:#FFFFFF;
+	background-color:#73b6e6;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+	border:1px solid #FFFFFF;
+}
+#diariosCielo td{
+	text-align:center;
+}
+#diariosCielo td:nth-child(1){
+	border-right:1px solid #73b6e6;
+}
+
+#ubicacion{
+	width:90%;
+	margin:auto;
+	border-collapse:collapse;
+	border:1px solid #73b6e6;
+}
+#ubicacion caption{
+	font-size:1.5em;
+	margin-top:1em;
+}
+#ubicacion th{
+	text-align:center;
+	color:#FFFFFF;
+	background-color:#73b6e6;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+	border:1px solid #FFFFFF;
+}
+#ubicacion td{
+	text-align:center;
+}
+#ubicacion td:nth-child(1),#ubicacion td:nth-child(2){
+	border-right:1px solid #73b6e6;
+}
+#datosEstacion h4{
+	text-align:right;
+	font-weight:normal;
+}
+
+#tablaTemp{
+	width:70%;
+	margin:0 auto;	
+	border-collapse:collapse;
+	border:1px solid #cccccc;
+	margin-top:1.5em;
+	margin-left:5.8em;
+}
+
+#tablaTemp caption{
+	font-size:1.3em;
+	text-transform:Uppercase;
+	margin-bottom:5px;
+}
+
+#tablaTemp th{
+	text-shadow: 1px 1px #000;
+}
+
+#tablaTemp .fila{
+	border-top:1px solid #cccccc;
+	border-bottom:1px solid #cccccc;
+}
+
+#tablaTemp tr:nth-child(odd){
+	background-color:#73b6e6;
+	border-collapse:collapse;
+	color:#ffffff;
+}
+
+#tablaTemp .ciudad{
+	border-right:1px solid #cccccc;
+	padding-left:1em;
+	font-weight:bold;
+}
+
+#tablaTemp .min,#tablaTemp .max{
+	text-align:center;	
+}
+
+#tablaTemp .min{
+	text-shadow: 1px 1px #a6d8fc;
+	color:blue;
+	font-weight:600%;
+}
+
+#tablaTemp .max{
+	text-shadow: 1px 1px #000;
+	color:red;
+	font-weight:600%;
+}
+
+#registro{
+	width:100%;
+	height:1em;
+	color:#000;
+	text-align:center;
+	font-size:2em;
+	margin:0;
+	padding-top:0.1em;
+}
+
+#ventajas{
+	width:40%;
+	height:80%;
+	margin-left:6em;
+}
+#ventajas li{
+	margin-top:3px;
+}
+
+#formReg{
+	width:34%;
+	height:70%;
+	margin-left:4em;
+}
+.error{
+	display:block;
+	color:red;
+	margin-top:5px;
+	animation: blink 3s linear infinite;
+}
+@keyframes blink{
+0%{opacity: 0;}
+50%{opacity: .5;}
+100%{opacity: 1;}
+}
+
+#formReg fieldset{
+	padding:1em;
+	border-radius:12px;
+	font-weight:bold;
+	padding-left:2em;
+}
+
+#formReg legend{
+	font-size:1.5em;	
+}
+#formReg label{
+	display:block;
+	margin-top:1.5em;	
+}
+#formReg input{
+	display:block;
+	clear:right;
+	width:70%;
+	margin-top:4px;	
+}
+
+#formReg fieldset:nth-child(2){
+	margin-top:0.5em;
+}
+#formReg select{
+	display:block;
+	clear:right;
+	margin-top:4px;	
+}
+
+input#registrame{
+	display:block;
+	float:right;
+	margin-top:2em;
+	width:10em;
+	text-align:center;
+	border:1px solid #000;
+	background-color:red;
+	color:#ffffff;
+	font-weight:bold;
+	border-radius:12px;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+	height:2em;
+}
