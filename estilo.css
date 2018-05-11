@@ -202,8 +202,8 @@ input#loguearse{
 	display:block;
 	float:left;
 	width:100%;
-	height:22em;
-	margin-top:1.5em;
+	height:23em;
+	margin-top:1em;
 	border-radius:12px;
 	border:1px solid #cccccc;
 }
@@ -321,6 +321,26 @@ div#mapa{
 div#resultados{
 	width:45%;
 	height:87%;
+}
+#arribaDerechaPerfil{
+	width:35em;
+	padding:0em 0em 0em 1em;
+	overflow: auto;
+	height:31em;
+	margin:0 auto;
+}
+#historicoPerf{
+	width:35em;
+	height:100%;
+	overflow: auto;
+}
+
+.datosGuardados{
+	display:block;
+	width:34.5em;
+	font-weight:bold;
+	color:red;
+	text-align:center;
 }
 
 footer{
@@ -599,4 +619,169 @@ input#registrame{
 	border-radius:12px;
 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
 	height:2em;
+}
+
+div#botonesCambiosPerfil{
+	display:block;
+	float:right;
+	width:50%;
+	text-align:right;
+	margin-left:35.5em;	
+	margin-top: -1em;
+}
+div#botonesCambiosHistorico{
+	display:block;
+	float:right;
+	width:50%;
+	text-align:right;
+	margin-left:34.5em;	
+	margin-top:-1em;
+}
+
+div#botonesCambiosPerfil form,div#botonesCambiosHistorico form {
+	display:block;
+	float:left;
+	margin-left:4.1em;	
+}
+
+#historicoTempPerfil{
+	margin-top:9em;
+	padding-top:3em;
+	margin-left:2.5em;
+	width:30em;	
+	border:1px solid #000000;
+	text-align:center;
+	font-weight:bold;
+	border-collapse:collapse;
+}
+#historicoTempPerfil caption{
+	text-align:center;
+	font-size:2.5em;
+	color:#000;
+	margin-top:-2em;
+	margin-bottom:1em;	
+}
+
+#historicoTempPerfil th{
+	color:#ffffff;
+	background-color:#99aa78;
+	padding-bottom:10px;
+	padding-top:10px;
+	text-shadow: 1px 1px #000;
+	border-bottom:1px solid #000000;
+}
+#historicoTempPerfil tr:nth-child(even){
+	background-color:#ffffff;
+	border-collapse:collapse;
+	color:#000000;	
+}
+
+#historicoTempPerfil tr:nth-child(odd){
+	background-color:#e7e2c9;
+	border-collapse:collapse;
+	color:#00000;
+}
+#historicoTempPerfil tr a{
+	text-decoration:none;
+	color:#000000;
+}
+#historicoTempPerfil td:nth-child(even){
+	font-weight:normal;
+}
+
+#tituloHist{
+	margin-left:1em;
+	padding-top:3em;
+	text-align:center;
+	font-size:2.5em;
+	color:#000;
+}
+
+#subtituloHist{
+	margin-left:1em;
+	padding-top:1em;
+	text-align:center;
+	font-size:2em;
+	color:#000;
+	font-weight:normal;
+	
+}
+
+#datosPerfil{
+	width:36em;
+	height:30em;
+text-align:center;	
+}
+
+img#fotoPerfilG{
+	display:block;
+	clear:right;
+	margin:0 auto;
+	width: 10em;
+	height:10em;
+	margin:0 auto;
+	border:1px solid #000;
+}
+#Nusuario{
+	display:block;
+	padding-top:1em;
+	clear:right;
+	margin:0 auto;
+	font-size:2.5em;
+	color:#FFFFFF;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000;
+	
+}
+#nTemperaturas{
+	display:block;
+	clear:right;
+	margin:0 auto;
+}
+
+
+#datosPerfilMini{
+	width:100%;
+	height:13.5em;
+}
+#fotoPerfilGMini{
+	display:block;
+	float:left;
+	margin-left:1em;
+	width:7em;
+	height:7em;
+	border:1px solid #000;
+}
+
+#NusuarioMini{
+	display:block;
+	float:left;
+	width:9em;
+	font-weight:bold;
+	font-size:1.5em;
+	text-align:center;
+
+}
+#nTemperaturasMini{
+	display:block;
+	float:left;
+	width:14em;
+	margin-left:1em;
+	font-size:0.9em;
+
+}
+#datosPerfilMini a{
+	display:block;
+	float:left;
+	width:100%;
+	margin-left:1.5em;
+	margin-top:0.5em;
+	text-decoration:none;
+}
+
+#datosPerfilMini input{
+	display:block;
+	float:right;
+	margin-right:1.5em;
+	text-align:center;
+	margin-top: 1.2em;
 }

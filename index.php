@@ -1,4 +1,5 @@
 <?php 
+	session_start();
 	require_once('meteogalicia.php');
 	require_once('db.php');
 	require_once('utilidades.php');
@@ -26,7 +27,13 @@
 	<main id="cuerpo">
 		<section id="menu">
 			<div id="login">
-			<?php creaLogin();?>
+			<?php 
+			if(isset($_SESSION['nick'])){
+				creaMenuUsuario($_SESSION);
+			}else{
+				creaLogin();
+			}
+			?>
 			<div id="historico">
 				<?php
 					//Recogemos las ultimas 10 temperaturas de la base de datos

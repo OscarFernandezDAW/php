@@ -37,7 +37,7 @@
 	
 	//Función para crear el historico de las temperaturas cogidas de la base de dadtos
 	function crearHistorico($temperaturasDB){
-		print '<table sumary="Tabla que muestra los 10 ultimos registros de temperatura" id="historicoTemp">'."\n";
+		print '<table sumary="Tabla que muestra los ultimos 10 registros de temperatura" id="historicoTemp">'."\n";
 		print '					<caption>Historico de temperaturas</caption>'."\n";
 		print '					<thead>'."\n";
 		print '						<tr>'."\n";
@@ -278,10 +278,29 @@
 	function generarEnlaces(){
 		if(isset($_GET["accion"])){
 			if($_GET["accion"]=="registrarse"){
-				print ' > <a href="index.php?accion=registrarse">Registro</a>';
+				print ' > <a href="index.php?accion=registrarse">Registro</a>'."\n";
 			}else if(isset($_GET["idEstacion"])){
-				print ' > <a href="index.php?idEstacion='.$_GET["idEstacion"].'">Datos de estación</a>';
+				print ' > <a href="index.php?idEstacion='.$_GET["idEstacion"].'">Datos de estación</a>'."\n";
 			}
 		}
 	}
+	
+	function creaMenuUsuario($datosSesion){
+		$datosUsuario=DB::verificaUsuario($_SESSION['nick'],$_SESSION['pass']);
+		if($datosUsuario['rol']=="usuario" || $datosUsuario['rol']=="guest"){
+			print '<div id="datosPerfilMini">'."\n"; 
+			print ' 	<img id="fotoPerfilGMini" src="img/usuario.png" >'."\n";
+			print ' 	<p id="NusuarioMini">'.$datosUsuario['nick'].'<p>'."\n";			
+			print ' 	<p id="nTemperaturasMini">Temperaturas Guardadas: '.sizeof(DB::obtenerTempUsuario($datosUsuario['id'])).'<p>'."\n";
+			print ' 	<a href="index.php?accion=registrarse">Preferencias del usuario</a>'."\n";
+			print ' 	<a href="index.php?accion=perfil">Estaciones / Históricos</a>'."\n";
+			print ' 	<input type="submit" id="logout" name="logout" value="Desconectar!" />'."\n";
+			print '</div>'."\n";
+		}else{
+			
+			
+		}
+	}
+		
+	
 ?>

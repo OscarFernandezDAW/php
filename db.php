@@ -94,6 +94,40 @@
 			return $coincidencia;
 		}
 		
+		//Función para meter una temperatura en la base de datos
+		public static function meterTemperatura($id_usuario,$id_estacion,$valTemperatura) {
+			$sql = "INSERT INTO temperaturas (id_usuario,id_estacion,valTemperatura) VALUES ('$id_usuario','$id_estacion','$valTemperatura')";
+			$resultado = self::ejecutaConsulta($sql);
+			return $resultado;
+		}
+		
+		//Función para saber el historico de temperaturas de un usuario
+		public static function obtenerTempUsuario($id_usuario) {
+			$sql = "SELECT id_estacion, valTemperatura "; 
+			$sql .="FROM temperaturas ";
+			$sql .= "WHERE id_usuario='$id_usuario' ;";
+			$resultado = self::ejecutaConsulta($sql);
+			
+			if(isset($resultado)) {
+				$fila = $resultado->fetch(PDO::FETCH_ASSOC);
+				$temperaturas=array();
+				while ($fila != null) {
+					$temperaturas[]=[$fila["id_estacion"],$fila["valTemperatura"]];
+					$fila = $resultado->fetch(PDO::FETCH_ASSOC);
+				}	
+			}else{
+				echo "hola";
+			}
+			return $temperaturas;
+		}
+		
+		//Función para borrar el histórico
+		public static function borraHistoricoTemp($id_usuario) {
+			$sql = "DELETE FROM temperaturas WHERE id_usuario='$id_usuario';";
+			$resultado = self::ejecutaConsulta($sql);
+			return $resultado;
+		}
+		
 		//Función para saber ultimas 10 temperaturas
 		public static function obtener10Temp() {
 			$sql = "SELECT id_estacion, valTemperatura "; 

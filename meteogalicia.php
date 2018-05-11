@@ -53,9 +53,13 @@ function sacarEstacion($datosEstacion){
 function sacarConcello($datosEstacion){
 	return $nombreConcello=$datosEstacion["listEstadoActual"][0]["concello"];	
 }
-//Funcion para sacar el concello de la estación a partir de un id
+//Funcion para sacar las coordenadas de la estación a partir de un id
 function sacarCoordenadas($datosEstacion){
 	return $coordenadas=[$datosEstacion["listEstadoActual"][0]["lat"],$datosEstacion["listEstadoActual"][0]["lon"]];	
+}
+//Funcion para sacar la temperatura
+function sacarTemp($datosEstacion){
+	return $temperatura=[$datosEstacion["listEstadoActual"][0]["lat"],$datosEstacion["listEstadoActual"][0]["valorTemperatura"]];	
 }
 
 //Funcion para saber si existe un id

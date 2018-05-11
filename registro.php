@@ -8,7 +8,7 @@
 				if(!preg_match("/([a-zA-Z0-9])+([a-zA-Z0-9\._-])/",$_POST["nickReg"])){
 						$errorNick= "El nick contiene caracteres no válidos";
 				}else{
-					if(strlen($_POST["nickReg"])<6){
+					if(strlen($_POST["passReg"])<6){
 						$errorPass= "La contraseña debe contener 6 caracteres mínimo";
 					}else{
 						if($_POST["passReg"]!=$_POST["passRep"]){
@@ -20,7 +20,9 @@
 								if($_POST["idEstacion"]=="-1"){
 									$errorEstacion="No ha seleccionado ninguna estacion";
 								}else{
-									DB::creaUsuario($_POST["nickReg"],md5($_POST["nickReg"]),$_POST["rol"],$_POST["idEstacion"]);
+									DB::creaUsuario($_POST["nickReg"],md5($_POST["passReg"]),$_POST["rol"],$_POST["idEstacion"]);
+									$_SESSION['nick']=$_POST["nickReg"];
+									$_SESSION['pass']=md5($_POST["passReg"]);
 									header("Location: index.php?accion=perfil");
 									die();
 								}
